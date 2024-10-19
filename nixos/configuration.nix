@@ -58,6 +58,16 @@
   services.displayManager = {
     defaultSession = "none+i3";
   };
+
+  # Configuration compositor
+  services.picom = {
+    enable = true;
+    inactiveOpacity = 0.8;
+
+    settings = {
+      corner-radius = 8;
+    };
+  };
  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
