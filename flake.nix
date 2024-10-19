@@ -20,7 +20,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.k41531 = import ./home-manager/home.nix;
+            home-manager.users.k41531 = import ./home/home.nix;
           }
         ];
       };
