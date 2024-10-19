@@ -18,6 +18,10 @@
       prefix = "C-a";
     };
 
+    feh = {
+      enable = true;
+    };
+
     home-manager = {
       enable = true;
     };
