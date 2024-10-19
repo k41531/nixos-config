@@ -7,6 +7,8 @@
 
   imports = [
     ./nvim
+    ./i3
+    ./alacritty
   ];
   
   programs = {

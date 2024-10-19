@@ -48,6 +48,18 @@
     variant = "";
   };
 
+  # Configuration Window Manager
+  services.xserver = {
+    enable = true;
+    windowManager.i3.enable = true;
+  };
+
+  # Configuration Display Manager
+  services.displayManager = {
+    defaultSession = "none+i3";
+  };
+ 
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.k41531 = {
     isNormalUser = true;
