@@ -9,6 +9,7 @@
     ./nvim
     ./i3
     ./alacritty
+    ./firefox
   ];
   
   programs = {
