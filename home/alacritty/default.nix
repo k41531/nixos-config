@@ -12,6 +12,10 @@
         program = "${pkgs.fish}/bin/fish";
       };
 
+      window = {
+        padding = { x = 8; y = 8; };
+      };
+
       colors = {
         primary = {
           background = "0x1D1F28";
