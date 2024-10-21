@@ -18,6 +18,7 @@
     };
     tmux = {
       enable = true;
+      shell = "${pkgs.fish}/bin/fish";
       prefix = "C-a";
     };
 
