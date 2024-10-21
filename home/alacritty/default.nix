@@ -1,10 +1,15 @@
+{ config, pkgs, ... }:
 {
   programs.alacritty = {
-    enable = true;
+   enable = true;
 
     settings = {
       font = {
         size = 10;
+      };
+
+      shell = {
+        program = "${pkgs.fish}/bin/fish";
       };
 
       colors = {

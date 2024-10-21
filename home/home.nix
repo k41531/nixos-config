@@ -13,6 +13,9 @@
   ];
   
   programs = {
+    fish = {
+      enable = true;
+    };
     tmux = {
       enable = true;
       prefix = "C-a";
