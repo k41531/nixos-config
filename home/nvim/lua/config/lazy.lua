@@ -18,6 +18,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    spec = {},
+    spec = {
+        { "neovim/nvim-lspconfig", opt = {} }
+    },
     checker = { enabled = true },
 })
+
+-- Setup LSP
+require'lspconfig'.nixd.setup{}
