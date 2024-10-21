@@ -15,13 +15,16 @@
         system = "aarch64-linux";
         modules = [
           ./nixos/configuration.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.k41531 = import ./home/home.nix;
-          }
+        ];
+      };
+    };
+    homeConfigurations = {
+      home = inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          system = "aarch64-linux";
+        };
+        modules = [
+          ./home/home.nix
         ];
       };
     };
