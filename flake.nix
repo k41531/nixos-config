@@ -9,24 +9,30 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./nixos/configuration.nix
-        ];
-      };
-    };
-    homeConfigurations = {
-      home = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
+          modules = [
+            ./nixos/configuration.nix
+          ];
         };
-        modules = [
-          ./home/home.nix
-        ];
+      };
+      homeConfigurations = {
+        home = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "aarch64-linux";
+          };
+          modules = [
+            ./home/home.nix
+          ];
+        };
       };
     };
-  };
 }
