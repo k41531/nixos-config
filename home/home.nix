@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "k41531";
@@ -11,7 +11,7 @@
     ./alacritty
     ./firefox
   ];
-  
+
   programs = {
     fish = {
       enable = true;

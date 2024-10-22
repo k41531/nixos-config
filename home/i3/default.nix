@@ -1,4 +1,3 @@
-{ config, pkgs, ...}:
 {
   xsession.windowManager.i3 = {
     enable = true;
@@ -7,7 +6,11 @@
       terminal = "alacritty";
 
       startup = [
-        { command = "~/.fehbg"; always = true; notification = false; }
+        {
+          command = "~/.fehbg";
+          always = true;
+          notification = false;
+        }
       ];
 
       window = {
@@ -24,16 +27,16 @@
         {
           colors = {
             background = "#282A36";
-	    focusedWorkspace = {
+            focusedWorkspace = {
               background = "#1D1F28";
-	      border = "#1D1F28";
-	      text = "#FDFDFD";
-	    };
-	    inactiveWorkspace = {
+              border = "#1D1F28";
+              text = "#FDFDFD";
+            };
+            inactiveWorkspace = {
               background = "#282A36";
-	      border = "#282A36";
-	      text = "#BEBEC1";
-	    };
+              border = "#282A36";
+              text = "#BEBEC1";
+            };
           };
         }
       ];
