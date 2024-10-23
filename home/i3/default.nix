@@ -5,14 +5,6 @@
       modifier = "Mod4";
       terminal = "alacritty";
 
-      startup = [
-        {
-          command = "~/.fehbg";
-          always = true;
-          notification = false;
-        }
-      ];
-
       window = {
         titlebar = false;
         border = 0;
