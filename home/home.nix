@@ -6,7 +6,7 @@
   home.stateVersion = "24.05";
 
   imports = [
-    ./nvim
+    ./neovim
     ./i3
     ./alacritty
     ./firefox

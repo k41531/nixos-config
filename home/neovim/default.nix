@@ -5,7 +5,7 @@
     vimAlias = true;
     extraLuaConfig = ''
       package.path = package.path .. ';${./lua}/?.lua'
-      dofile('${./nvim.lua}')
+      dofile('${./init.lua}')
     '';
   };
 }
